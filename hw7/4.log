@@ -1,0 +1,30 @@
+==334== Memcheck, a memory error detector
+==334== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==334== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==334== Command: ./a.out new2
+==334== 
+==334== error calling PR_SET_PTRACER, vgdb might block
+Inserting to trie...	be$
+be$: 0
+e$b: 1
+$be: 2
+bet$
+bet$: 0
+et$b: 1
+t$be: 2
+$bet: 3
+ab$
+ab$: 0
+b$a: 1
+$ab: 2
+[done]
+
+Query: ==334== 
+==334== HEAP SUMMARY:
+==334==     in use at exit: 0 bytes in 0 blocks
+==334==   total heap usage: 60 allocs, 60 frees, 9,578 bytes allocated
+==334== 
+==334== All heap blocks were freed -- no leaks are possible
+==334== 
+==334== For counts of detected and suppressed errors, rerun with: -v
+==334== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

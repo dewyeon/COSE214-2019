@@ -1,0 +1,273 @@
+==101== Memcheck, a memory error detector
+==101== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==101== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==101== Command: ./a.out new
+==101== Parent PID: 4
+==101== 
+==101== error calling PR_SET_PTRACER, vgdb might block
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32D08: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x1090DC: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x109104: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32D08: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x4ED99AD: strdup (strdup.c:41)
+==101==    by 0x1090A9: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32D08: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x1090B8: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32CF9: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x1090DC: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32CF9: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x4ED99AD: strdup (strdup.c:41)
+==101==    by 0x1090A9: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32CF9: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x1090B8: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32D08: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x4E994D2: vfprintf (vfprintf.c:1643)
+==101==    by 0x4EA0F25: printf (printf.c:33)
+==101==    by 0x108C20: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4EC7A65: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1241)
+==101==    by 0x4E98FEA: vfprintf (vfprintf.c:1643)
+==101==    by 0x4EA0F25: printf (printf.c:33)
+==101==    by 0x108C20: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4EC7A77: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1241)
+==101==    by 0x4E98FEA: vfprintf (vfprintf.c:1643)
+==101==    by 0x4EA0F25: printf (printf.c:33)
+==101==    by 0x108C20: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Syscall param write(buf) points to uninitialised byte(s)
+==101==    at 0x4F4C154: write (write.c:27)
+==101==    by 0x4EC71BC: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1203)
+==101==    by 0x4EC8F50: new_do_write (fileops.c:457)
+==101==    by 0x4EC8F50: _IO_do_write@@GLIBC_2.2.5 (fileops.c:433)
+==101==    by 0x4EC79EC: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+==101==    by 0x4E979A9: vfprintf (vfprintf.c:1674)
+==101==    by 0x4EA0F25: printf (printf.c:33)
+==101==    by 0x108C20: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101==  Address 0x52311ba is 10 bytes inside a block of size 512 alloc'd
+==101==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x4EBA18B: _IO_file_doallocate (filedoalloc.c:101)
+==101==    by 0x4ECA378: _IO_doallocbuf (genops.c:365)
+==101==    by 0x4EC9497: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+==101==    by 0x4EC79EC: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+==101==    by 0x4E97533: vfprintf (vfprintf.c:1328)
+==101==    by 0x4EA0F25: printf (printf.c:33)
+==101==    by 0x10923E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x108C93: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32CF9: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x4E994D2: vfprintf (vfprintf.c:1643)
+==101==    by 0x4EA0F25: printf (printf.c:33)
+==101==    by 0x108C20: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x108C33: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x108C47: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x108C5B: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x108C6F: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32D08: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x1090DC: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x109104: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32D08: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x1090B8: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32D08: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x1090DC: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x109104: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32D08: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x1090B8: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32D08: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x1090DC: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32D08: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x1090B8: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32CF9: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x1090DC: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32D08: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x1090DC: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x109104: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32CF9: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x1090B8: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4C32D08: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101==    by 0x1090B8: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x109104: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x109104: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x109104: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x109104: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x109104: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x109104: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x109104: make_permuterms (in /home/dewyeon/hw7/a.out)
+==101==    by 0x10927E: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x108C93: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x108C33: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x108C47: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x108C5B: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x108C6F: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4EC932D: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:789)
+==101==    by 0x4ECA493: _IO_default_xsputn (genops.c:417)
+==101==    by 0x4EC7A32: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1287)
+==101==    by 0x4E98FEA: vfprintf (vfprintf.c:1643)
+==101==    by 0x4EA0F25: printf (printf.c:33)
+==101==    by 0x108C20: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4EC935A: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:797)
+==101==    by 0x4ECA493: _IO_default_xsputn (genops.c:417)
+==101==    by 0x4EC7A32: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1287)
+==101==    by 0x4E98FEA: vfprintf (vfprintf.c:1643)
+==101==    by 0x4EA0F25: printf (printf.c:33)
+==101==    by 0x108C20: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Conditional jump or move depends on uninitialised value(s)
+==101==    at 0x4ECA497: _IO_default_xsputn (genops.c:417)
+==101==    by 0x4EC7A32: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1287)
+==101==    by 0x4E98FEA: vfprintf (vfprintf.c:1643)
+==101==    by 0x4EA0F25: printf (printf.c:33)
+==101==    by 0x108C20: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== Invalid read of size 1
+==101==    at 0x108C8E: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101==  Address 0x524052405240e20 is not stack'd, malloc'd or (recently) free'd
+==101== 
+==101== 
+==101== Process terminating with default action of signal 11 (SIGSEGV)
+==101==  General Protection Fault
+==101==    at 0x108C8E: trieInsert (in /home/dewyeon/hw7/a.out)
+==101==    by 0x1092B2: main (in /home/dewyeon/hw7/a.out)
+==101== 
+==101== HEAP SUMMARY:
+==101==     in use at exit: 55,666 bytes in 319 blocks
+==101==   total heap usage: 361 allocs, 42 frees, 57,509 bytes allocated
+==101== 
+==101== LEAK SUMMARY:
+==101==    definitely lost: 42,470 bytes in 191 blocks
+==101==    indirectly lost: 0 bytes in 0 blocks
+==101==      possibly lost: 0 bytes in 0 blocks
+==101==    still reachable: 13,196 bytes in 128 blocks
+==101==         suppressed: 0 bytes in 0 blocks
+==101== Rerun with --leak-check=full to see details of leaked memory
+==101== 
+==101== For counts of detected and suppressed errors, rerun with: -v
+==101== Use --track-origins=yes to see where uninitialised values come from
+==101== ERROR SUMMARY: 39620 errors from 46 contexts (suppressed: 0 from 0)

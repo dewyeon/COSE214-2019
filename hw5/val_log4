@@ -1,0 +1,89 @@
+==99== Memcheck, a memory error detector
+==99== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==99== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==99== Command: ./a.out
+==99== Parent PID: 4
+==99== 
+==99== error calling PR_SET_PTRACER, vgdb might block
+==99== Use of uninitialised value of size 8
+==99==    at 0x108FC2: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F56: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F56: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F56: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x109097: BST_Delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x1092D8: main (in /home/dewyeon/hw5/a.out)
+==99== 
+==99== Invalid write of size 4
+==99==    at 0x108FC2: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F56: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F56: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F56: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x109097: BST_Delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x1092D8: main (in /home/dewyeon/hw5/a.out)
+==99==  Address 0x522d990 is 0 bytes inside a block of size 24 free'd
+==99==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==99==    by 0x108F8B: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F56: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F56: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F56: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x109097: BST_Delete (in /home/dewyeon/hw5/a.out)
+==99==  Block was alloc'd at
+==99==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==99==    by 0x108A3E: _makeNode (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108C67: BST_Insert (in /home/dewyeon/hw5/a.out)
+==99==    by 0x1091C0: main (in /home/dewyeon/hw5/a.out)
+==99== 
+==99== Use of uninitialised value of size 8
+==99==    at 0x1090A6: BST_Delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x1092D8: main (in /home/dewyeon/hw5/a.out)
+==99== 
+==99== Invalid read of size 4
+==99==    at 0x1090A6: BST_Delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x1092D8: main (in /home/dewyeon/hw5/a.out)
+==99==  Address 0x522d990 is 0 bytes inside a block of size 24 free'd
+==99==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==99==    by 0x108F8B: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F56: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F56: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F56: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108F22: _delete (in /home/dewyeon/hw5/a.out)
+==99==    by 0x109097: BST_Delete (in /home/dewyeon/hw5/a.out)
+==99==  Block was alloc'd at
+==99==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==99==    by 0x108A3E: _makeNode (in /home/dewyeon/hw5/a.out)
+==99==    by 0x108C67: BST_Insert (in /home/dewyeon/hw5/a.out)
+==99==    by 0x1091C0: main (in /home/dewyeon/hw5/a.out)
+==99== 
+==99== 
+==99== HEAP SUMMARY:
+==99==     in use at exit: 0 bytes in 0 blocks
+==99==   total heap usage: 22 allocs, 22 frees, 1,488 bytes allocated
+==99== 
+==99== All heap blocks were freed -- no leaks are possible
+==99== 
+==99== For counts of detected and suppressed errors, rerun with: -v
+==99== Use --track-origins=yes to see where uninitialised values come from
+==99== ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0)

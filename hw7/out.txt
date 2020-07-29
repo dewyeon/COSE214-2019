@@ -1,0 +1,203 @@
+Inserting to trie...	**0 - bet
+**1 - bet
+**2 - bet
+a. makenode[0]
+b. makenode[0]
+c. makenode[0]
+temp = temp->subtrees[getIndex(str[i])];
+a. makenode[1]
+b. makenode[1]
+c. makenode[1]
+temp = temp->subtrees[getIndex(str[i])];
+a. makenode[2]
+b. makenode[2]
+c. makenode[2]
+temp = temp->subtrees[getIndex(str[i])];
+bet made
+bet$
+bet$: 0
+bet$: 1
+bet$: 2
+bet$: 3
+**0 - bet$
+**1 - bet$
+**2 - bet$
+**3 - bet$
+**0 - et$b
+**1 - et$b
+**2 - et$b
+**0 - t$be
+**1 - t$be
+**0 - $bet
+**0 - be
+**1 - be
+temp = temp->subtrees[getIndex(str[i])];
+temp = temp->subtrees[getIndex(str[i])];
+be made
+be$
+be$: 0
+be$: 1
+be$: 2
+**0 - be$
+**1 - be$
+**2 - be$
+**0 - e$b
+**1 - e$b
+**0 - $be
+**0 - bell
+**1 - bell
+**2 - bell
+**3 - bell
+temp = temp->subtrees[getIndex(str[i])];
+temp = temp->subtrees[getIndex(str[i])];
+a. makenode[2]
+b. makenode[2]
+c. makenode[2]
+temp = temp->subtrees[getIndex(str[i])];
+a. makenode[3]
+b. makenode[3]
+c. makenode[3]
+temp = temp->subtrees[getIndex(str[i])];
+bell made
+bell$
+bell$: 0
+bell$: 1
+bell$: 2
+bell$: 3
+bell$: 4
+**0 - bell$
+**1 - bell$
+**2 - bell$
+**3 - bell$
+**4 - bell$
+**0 - ell$b
+**1 - ell$b
+**2 - ell$b
+**3 - ell$b
+**0 - ll$be
+**1 - ll$be
+**2 - ll$be
+**0 - l$bel
+**1 - l$bel
+**0 - $bell
+**0 - apple
+**1 - apple
+**2 - apple
+**3 - apple
+**4 - apple
+a. makenode[0]
+b. makenode[0]
+c. makenode[0]
+temp = temp->subtrees[getIndex(str[i])];
+a. makenode[1]
+b. makenode[1]
+c. makenode[1]
+temp = temp->subtrees[getIndex(str[i])];
+a. makenode[2]
+b. makenode[2]
+c. makenode[2]
+temp = temp->subtrees[getIndex(str[i])];
+a. makenode[3]
+b. makenode[3]
+c. makenode[3]
+temp = temp->subtrees[getIndex(str[i])];
+a. makenode[4]
+b. makenode[4]
+c. makenode[4]
+temp = temp->subtrees[getIndex(str[i])];
+apple made
+apple$
+apple$: 0
+apple$: 1
+apple$: 2
+apple$: 3
+apple$: 4
+apple$: 5
+**0 - apple$
+**1 - apple$
+**2 - apple$
+**3 - apple$
+**4 - apple$
+**5 - apple$
+**0 - pple$a
+**1 - pple$a
+**2 - pple$a
+**3 - pple$a
+**4 - pple$a
+**0 - ple$ap
+**1 - ple$ap
+**2 - ple$ap
+**3 - ple$ap
+**0 - le$app
+**1 - le$app
+**2 - le$app
+**0 - e$appl
+**1 - e$appl
+**0 - $apple
+**0 - cat
+**1 - cat
+**2 - cat
+a. makenode[0]
+b. makenode[0]
+c. makenode[0]
+temp = temp->subtrees[getIndex(str[i])];
+a. makenode[1]
+b. makenode[1]
+c. makenode[1]
+temp = temp->subtrees[getIndex(str[i])];
+a. makenode[2]
+b. makenode[2]
+c. makenode[2]
+temp = temp->subtrees[getIndex(str[i])];
+cat made
+cat$
+cat$: 0
+cat$: 1
+cat$: 2
+cat$: 3
+**0 - cat$
+**1 - cat$
+**2 - cat$
+**3 - cat$
+**0 - at$c
+**1 - at$c
+**2 - at$c
+**0 - t$ca
+**1 - t$ca
+**0 - $cat
+**0 - app
+**1 - app
+**2 - app
+temp = temp->subtrees[getIndex(str[i])];
+temp = temp->subtrees[getIndex(str[i])];
+temp = temp->subtrees[getIndex(str[i])];
+app made
+app$
+app$: 0
+app$: 1
+app$: 2
+app$: 3
+**0 - app$
+**1 - app$
+**2 - app$
+**3 - app$
+**0 - pp$a
+**1 - pp$a
+**2 - pp$a
+**0 - p$ap
+**1 - p$ap
+**0 - $app
+**0 - a's
+**1 - a's
+**0 - bet's
+**1 - bet's
+**2 - bet's
+**3 - bet's
+**0 - be
+**1 - be
+temp = temp->subtrees[getIndex(str[i])];
+temp = temp->subtrees[getIndex(str[i])];
+be not made
+[done]
+
+Query: 

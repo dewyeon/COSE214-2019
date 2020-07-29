@@ -1,0 +1,145 @@
+==53== Memcheck, a memory error detector
+==53== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==53== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==53== Command: ./a.out new2
+==53== Parent PID: 4
+==53== 
+==53== error calling PR_SET_PTRACER, vgdb might block
+==53== Use of uninitialised value of size 8
+==53==    at 0x4C32E00: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x10915A: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Use of uninitialised value of size 8
+==53==    at 0x4C32E0D: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x10915A: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Conditional jump or move depends on uninitialised value(s)
+==53==    at 0x4C32E17: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x10915A: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Conditional jump or move depends on uninitialised value(s)
+==53==    at 0x4C32E21: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x10915A: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Conditional jump or move depends on uninitialised value(s)
+==53==    at 0x4C32E23: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x10915A: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Conditional jump or move depends on uninitialised value(s)
+==53==    at 0x4C32E32: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x10915A: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Use of uninitialised value of size 8
+==53==    at 0x4C32CF2: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x4ED99AD: strdup (strdup.c:41)
+==53==    by 0x1091A2: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Use of uninitialised value of size 8
+==53==    at 0x4C32D04: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x4ED99AD: strdup (strdup.c:41)
+==53==    by 0x1091A2: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Conditional jump or move depends on uninitialised value(s)
+==53==    at 0x4C366F2: memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x1091A2: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Conditional jump or move depends on uninitialised value(s)
+==53==    at 0x4C3681B: memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x1091A2: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Conditional jump or move depends on uninitialised value(s)
+==53==    at 0x4C36831: memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x1091A2: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Conditional jump or move depends on uninitialised value(s)
+==53==    at 0x4C36702: memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x1091A2: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Conditional jump or move depends on uninitialised value(s)
+==53==    at 0x4C36707: memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x1091A2: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Conditional jump or move depends on uninitialised value(s)
+==53==    at 0x4C36729: memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x1091A2: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Use of uninitialised value of size 8
+==53==    at 0x4C36750: memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x1091A2: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Use of uninitialised value of size 8
+==53==    at 0x4C36753: memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x1091A2: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Conditional jump or move depends on uninitialised value(s)
+==53==    at 0x4C3675F: memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x1091A2: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Use of uninitialised value of size 8
+==53==    at 0x1091C0: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Use of uninitialised value of size 8
+==53==    at 0x1091C3: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Use of uninitialised value of size 8
+==53==    at 0x1091E0: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Use of uninitialised value of size 8
+==53==    at 0x4C36788: memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x1091A2: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Use of uninitialised value of size 8
+==53==    at 0x4C3678B: memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x1091A2: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Conditional jump or move depends on uninitialised value(s)
+==53==    at 0x4C36796: memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x1091A2: make_permuterms (in /home/dewyeon/hw7/a.out)
+==53==    by 0x10937B: main (in /home/dewyeon/hw7/a.out)
+==53== 
+==53== Invalid free() / delete / delete[] / realloc()
+==53==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53==    by 0x108C46: trieDestroy (in /home/dewyeon/hw7/a.out)
+==53==    by 0x108C88: trieDestroy (in /home/dewyeon/hw7/a.out)
+==53==    by 0x108C88: trieDestroy (in /home/dewyeon/hw7/a.out)
+==53==    by 0x109486: main (in /home/dewyeon/hw7/a.out)
+==53==  Address 0x246261246261 is not stack'd, malloc'd or (recently) free'd
+==53== 
+==53== 
+==53== HEAP SUMMARY:
+==53==     in use at exit: 204,512 bytes in 913 blocks
+==53==   total heap usage: 938 allocs, 36 frees, 209,108 bytes allocated
+==53== 
+==53== LEAK SUMMARY:
+==53==    definitely lost: 200,032 bytes in 893 blocks
+==53==    indirectly lost: 4,480 bytes in 20 blocks
+==53==      possibly lost: 0 bytes in 0 blocks
+==53==    still reachable: 0 bytes in 0 blocks
+==53==         suppressed: 0 bytes in 0 blocks
+==53== Rerun with --leak-check=full to see details of leaked memory
+==53== 
+==53== For counts of detected and suppressed errors, rerun with: -v
+==53== Use --track-origins=yes to see where uninitialised values come from
+==53== ERROR SUMMARY: 219 errors from 24 contexts (suppressed: 0 from 0)

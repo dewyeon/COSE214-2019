@@ -1,0 +1,625 @@
+==76== Memcheck, a memory error detector
+==76== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==76== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==76== Command: ./a.out
+==76== Parent PID: 4
+==76== 
+--76-- 
+--76-- Valgrind options:
+--76--    --leak-check=yes
+--76--    -v
+--76--    --log-file=./a.log
+--76-- Contents of /proc/version:
+--76--   Linux version 4.4.0-17134-Microsoft (Microsoft@Microsoft.com) (gcc version 5.4.0 (GCC) ) #648-Microsoft Tue Mar 05 18:57:00 PST 2019
+--76-- 
+--76-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2-bmi
+--76-- Page sizes: currently 4096, max supported 4096
+--76-- Valgrind library directory: /usr/lib/valgrind
+--76-- Reading syms from /home/dewyeon/hw2/a.out
+--76-- Reading syms from /lib/x86_64-linux-gnu/ld-2.27.so
+--76--   Considering /lib/x86_64-linux-gnu/ld-2.27.so ..
+--76--   .. CRC mismatch (computed 1b7c895e wanted 2943108a)
+--76--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.27.so ..
+--76--   .. CRC is valid
+--76-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--76--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--76--   .. CRC mismatch (computed c25f395c wanted 0a9602a8)
+--76--    object doesn't have a symbol table
+--76--    object doesn't have a dynamic symbol table
+--76-- Scheduler: using generic scheduler lock implementation.
+--76-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==76== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-76-by-dewyeon-on-???
+==76== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-76-by-dewyeon-on-???
+==76== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-76-by-dewyeon-on-???
+==76== 
+==76== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==76== don't want to do, unless you know exactly what you're doing,
+==76== or are doing some strange experiment):
+==76==   /usr/lib/valgrind/../../bin/vgdb --pid=76 ...command...
+==76== 
+==76== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==76==   /path/to/gdb ./a.out
+==76== and then give GDB the following command
+==76==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=76
+==76== --pid is optional if only one valgrind process is running
+==76== 
+==76== error calling PR_SET_PTRACER, vgdb might block
+--76-- REDIR: 0x401f2f0 (ld-linux-x86-64.so.2:strlen) redirected to 0x58060901 (???)
+--76-- REDIR: 0x401f0d0 (ld-linux-x86-64.so.2:index) redirected to 0x5806091b (???)
+--76-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--76--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--76--   .. CRC mismatch (computed 4b63d83e wanted 670599e6)
+--76--    object doesn't have a symbol table
+--76-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--76--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--76--   .. CRC mismatch (computed a4b37bee wanted 8ad4dc94)
+--76--    object doesn't have a symbol table
+==76== WARNING: new redirection conflicts with existing -- ignoring it
+--76--     old: 0x0401f2f0 (strlen              ) R-> (0000.0) 0x58060901 ???
+--76--     new: 0x0401f2f0 (strlen              ) R-> (2007.0) 0x04c32db0 strlen
+--76-- REDIR: 0x401d360 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c33ee0 (strcmp)
+--76-- REDIR: 0x401f830 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c374f0 (mempcpy)
+--76-- Reading syms from /lib/x86_64-linux-gnu/libc-2.27.so
+--76--   Considering /lib/x86_64-linux-gnu/libc-2.27.so ..
+--76--   .. CRC mismatch (computed b1c74187 wanted 042cc048)
+--76--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.27.so ..
+--76--   .. CRC is valid
+--76-- REDIR: 0x4edac70 (libc.so.6:memmove) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4ed9d40 (libc.so.6:strncpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4edaf50 (libc.so.6:strcasecmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4ed9790 (libc.so.6:strcat) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4ed9d70 (libc.so.6:rindex) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4edc7c0 (libc.so.6:rawmemchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4edade0 (libc.so.6:mempcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4edac10 (libc.so.6:bcmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4ed9d00 (libc.so.6:strncmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4ed9800 (libc.so.6:strcmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4edad40 (libc.so.6:memset) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4ef80f0 (libc.so.6:wcschr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4ed9ca0 (libc.so.6:strnlen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4ed9870 (libc.so.6:strcspn) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4edafa0 (libc.so.6:strncasecmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4ed9840 (libc.so.6:strcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4edb0e0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4ed9da0 (libc.so.6:strpbrk) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4ed97c0 (libc.so.6:index) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4ed9c70 (libc.so.6:strlen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4ee46c0 (libc.so.6:memrchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4edaff0 (libc.so.6:strcasecmp_l) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4edabe0 (libc.so.6:memchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4ef8eb0 (libc.so.6:wcslen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4eda050 (libc.so.6:strspn) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4edaf20 (libc.so.6:stpncpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4edaef0 (libc.so.6:stpcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4edc7f0 (libc.so.6:strchrnul) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4edb040 (libc.so.6:strncasecmp_l) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--76-- REDIR: 0x4fca3c0 (libc.so.6:__strrchr_avx2) redirected to 0x4c32730 (rindex)
+--76-- REDIR: 0x4ed3070 (libc.so.6:malloc) redirected to 0x4c2faa0 (malloc)
+--76-- REDIR: 0x4fca590 (libc.so.6:__strlen_avx2) redirected to 0x4c32cf0 (strlen)
+--76-- REDIR: 0x4fcaad0 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x4c366e0 (memmove)
+--76-- REDIR: 0x4ed3950 (libc.so.6:free) redirected to 0x4c30cd0 (free)
+--76-- REDIR: 0x4fa5d60 (libc.so.6:__strcmp_ssse3) redirected to 0x4c33da0 (strcmp)
+==76== Invalid read of size 1
+==76==    at 0x4FA5D60: __strcmp_ssse3 (strcmp.S:144)
+==76==    by 0x108AA1: _search (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108BEA: addNode (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108EB5: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d330 is 0 bytes inside a block of size 9 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== Invalid read of size 1
+==76==    at 0x4C33DA3: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108AA1: _search (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108BEA: addNode (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108EB5: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d420 is 0 bytes inside a block of size 6 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== Invalid read of size 1
+==76==    at 0x4FA5D60: __strcmp_ssse3 (strcmp.S:144)
+==76==    by 0x108ACD: _search (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108BEA: addNode (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108EB5: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d330 is 0 bytes inside a block of size 9 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== Invalid read of size 1
+==76==    at 0x4C33DA3: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108ACD: _search (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108BEA: addNode (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108EB5: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d420 is 0 bytes inside a block of size 6 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== Invalid read of size 1
+==76==    at 0x4C33DC4: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108AA1: _search (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108BEA: addNode (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108EB5: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d421 is 1 bytes inside a block of size 6 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== Invalid read of size 1
+==76==    at 0x4C33DC7: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108AA1: _search (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108BEA: addNode (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108EB5: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d511 is 1 bytes inside a block of size 6 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== Invalid read of size 1
+==76==    at 0x4C33DC4: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108ACD: _search (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108BEA: addNode (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108EB5: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d421 is 1 bytes inside a block of size 6 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== Invalid read of size 1
+==76==    at 0x4C33DC7: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108ACD: _search (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108BEA: addNode (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108EB5: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d511 is 1 bytes inside a block of size 6 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+--76-- REDIR: 0x4fca1d0 (libc.so.6:__strchrnul_avx2) redirected to 0x4c37020 (strchrnul)
+==76== Invalid read of size 1
+==76==    at 0x4C32CF2: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4E994D2: vfprintf (vfprintf.c:1643)
+==76==    by 0x4EA0F25: printf (printf.c:33)
+==76==    by 0x108D90: printList (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108F02: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d6a0 is 0 bytes inside a block of size 10 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== Invalid read of size 1
+==76==    at 0x4C32D04: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4E994D2: vfprintf (vfprintf.c:1643)
+==76==    by 0x4EA0F25: printf (printf.c:33)
+==76==    by 0x108D90: printList (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108F02: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d6a1 is 1 bytes inside a block of size 10 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== Invalid read of size 1
+==76==    at 0x4ECA487: _IO_default_xsputn (genops.c:417)
+==76==    by 0x4EC7A32: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1287)
+==76==    by 0x4E98FEA: vfprintf (vfprintf.c:1643)
+==76==    by 0x4EA0F25: printf (printf.c:33)
+==76==    by 0x108D90: printList (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108F02: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d6a0 is 0 bytes inside a block of size 10 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+--76-- REDIR: 0x4fcaab0 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4c37130 (mempcpy)
+==76== Invalid read of size 1
+==76==    at 0x4EC7A5D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1241)
+==76==    by 0x4E98FEA: vfprintf (vfprintf.c:1643)
+==76==    by 0x4EA0F25: printf (printf.c:33)
+==76==    by 0x108D90: printList (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108F02: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522da15 is 5 bytes inside a block of size 7 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== Invalid read of size 1
+==76==    at 0x4EC7A74: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1241)
+==76==    by 0x4E98FEA: vfprintf (vfprintf.c:1643)
+==76==    by 0x4EA0F25: printf (printf.c:33)
+==76==    by 0x108D90: printList (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108F02: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522da14 is 4 bytes inside a block of size 7 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== Invalid read of size 1
+==76==    at 0x4C371F8: mempcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4EC7993: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1258)
+==76==    by 0x4E98FEA: vfprintf (vfprintf.c:1643)
+==76==    by 0x4EA0F25: printf (printf.c:33)
+==76==    by 0x108D90: printList (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108F02: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522da15 is 5 bytes inside a block of size 7 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== Invalid read of size 1
+==76==    at 0x4C3720A: mempcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4EC7993: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1258)
+==76==    by 0x4E98FEA: vfprintf (vfprintf.c:1643)
+==76==    by 0x4EA0F25: printf (printf.c:33)
+==76==    by 0x108D90: printList (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108F02: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522da13 is 3 bytes inside a block of size 7 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== 
+==76== HEAP SUMMARY:
+==76==     in use at exit: 112 bytes in 7 blocks
+==76==   total heap usage: 30 allocs, 23 frees, 1,384 bytes allocated
+==76== 
+==76== Searching for pointers to 7 not-freed blocks
+==76== Checked 69,144 bytes
+==76== 
+==76== 112 bytes in 7 blocks are definitely lost in loss record 1 of 1
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108DBC: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== LEAK SUMMARY:
+==76==    definitely lost: 112 bytes in 7 blocks
+==76==    indirectly lost: 0 bytes in 0 blocks
+==76==      possibly lost: 0 bytes in 0 blocks
+==76==    still reachable: 0 bytes in 0 blocks
+==76==         suppressed: 0 bytes in 0 blocks
+==76== 
+==76== ERROR SUMMARY: 212 errors from 16 contexts (suppressed: 0 from 0)
+==76== 
+==76== 6 errors in context 1 of 16:
+==76== Invalid read of size 1
+==76==    at 0x4EC7A5D: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1241)
+==76==    by 0x4E98FEA: vfprintf (vfprintf.c:1643)
+==76==    by 0x4EA0F25: printf (printf.c:33)
+==76==    by 0x108D90: printList (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108F02: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522da15 is 5 bytes inside a block of size 7 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== 
+==76== 7 errors in context 2 of 16:
+==76== Invalid read of size 1
+==76==    at 0x4C32CF2: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4E994D2: vfprintf (vfprintf.c:1643)
+==76==    by 0x4EA0F25: printf (printf.c:33)
+==76==    by 0x108D90: printList (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108F02: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d6a0 is 0 bytes inside a block of size 10 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== 
+==76== 8 errors in context 3 of 16:
+==76== Invalid read of size 1
+==76==    at 0x4C3720A: mempcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4EC7993: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1258)
+==76==    by 0x4E98FEA: vfprintf (vfprintf.c:1643)
+==76==    by 0x4EA0F25: printf (printf.c:33)
+==76==    by 0x108D90: printList (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108F02: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522da13 is 3 bytes inside a block of size 7 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== 
+==76== 9 errors in context 4 of 16:
+==76== Invalid read of size 1
+==76==    at 0x4ECA487: _IO_default_xsputn (genops.c:417)
+==76==    by 0x4EC7A32: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1287)
+==76==    by 0x4E98FEA: vfprintf (vfprintf.c:1643)
+==76==    by 0x4EA0F25: printf (printf.c:33)
+==76==    by 0x108D90: printList (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108F02: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d6a0 is 0 bytes inside a block of size 10 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== 
+==76== 9 errors in context 5 of 16:
+==76== Invalid read of size 1
+==76==    at 0x4C33DA3: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108ACD: _search (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108BEA: addNode (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108EB5: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d420 is 0 bytes inside a block of size 6 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== 
+==76== 9 errors in context 6 of 16:
+==76== Invalid read of size 1
+==76==    at 0x4FA5D60: __strcmp_ssse3 (strcmp.S:144)
+==76==    by 0x108ACD: _search (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108BEA: addNode (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108EB5: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d330 is 0 bytes inside a block of size 9 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== 
+==76== 11 errors in context 7 of 16:
+==76== Invalid read of size 1
+==76==    at 0x4C33DC7: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108ACD: _search (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108BEA: addNode (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108EB5: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d511 is 1 bytes inside a block of size 6 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== 
+==76== 11 errors in context 8 of 16:
+==76== Invalid read of size 1
+==76==    at 0x4C33DC4: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108ACD: _search (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108BEA: addNode (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108EB5: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d421 is 1 bytes inside a block of size 6 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== 
+==76== 11 errors in context 9 of 16:
+==76== Invalid read of size 1
+==76==    at 0x4C33DC7: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108AA1: _search (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108BEA: addNode (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108EB5: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d511 is 1 bytes inside a block of size 6 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== 
+==76== 11 errors in context 10 of 16:
+==76== Invalid read of size 1
+==76==    at 0x4C33DC4: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108AA1: _search (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108BEA: addNode (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108EB5: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d421 is 1 bytes inside a block of size 6 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== 
+==76== 18 errors in context 11 of 16:
+==76== Invalid read of size 1
+==76==    at 0x4C371F8: mempcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4EC7993: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1258)
+==76==    by 0x4E98FEA: vfprintf (vfprintf.c:1643)
+==76==    by 0x4EA0F25: printf (printf.c:33)
+==76==    by 0x108D90: printList (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108F02: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522da15 is 5 bytes inside a block of size 7 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== 
+==76== 20 errors in context 12 of 16:
+==76== Invalid read of size 1
+==76==    at 0x4EC7A74: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1241)
+==76==    by 0x4E98FEA: vfprintf (vfprintf.c:1643)
+==76==    by 0x4EA0F25: printf (printf.c:33)
+==76==    by 0x108D90: printList (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108F02: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522da14 is 4 bytes inside a block of size 7 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== 
+==76== 23 errors in context 13 of 16:
+==76== Invalid read of size 1
+==76==    at 0x4C33DA3: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108AA1: _search (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108BEA: addNode (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108EB5: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d420 is 0 bytes inside a block of size 6 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== 
+==76== 23 errors in context 14 of 16:
+==76== Invalid read of size 1
+==76==    at 0x4FA5D60: __strcmp_ssse3 (strcmp.S:144)
+==76==    by 0x108AA1: _search (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108BEA: addNode (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108EB5: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d330 is 0 bytes inside a block of size 9 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== 
+==76== 35 errors in context 15 of 16:
+==76== Invalid read of size 1
+==76==    at 0x4C32D04: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4E994D2: vfprintf (vfprintf.c:1643)
+==76==    by 0x4EA0F25: printf (printf.c:33)
+==76==    by 0x108D90: printList (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108F02: main (in /home/dewyeon/hw2/a.out)
+==76==  Address 0x522d6a1 is 1 bytes inside a block of size 10 free'd
+==76==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x108E1C: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76==  Block was alloc'd at
+==76==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==76==    by 0x4ED99B9: strdup (strdup.c:42)
+==76==    by 0x108DD3: createToken (in /home/dewyeon/hw2/a.out)
+==76==    by 0x108E95: main (in /home/dewyeon/hw2/a.out)
+==76== 
+==76== ERROR SUMMARY: 212 errors from 16 contexts (suppressed: 0 from 0)
